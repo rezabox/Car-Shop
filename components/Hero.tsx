@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import CustomButton from './CustomButton';
+import hero_car from '../public/hero.png';
 const Hero = ()=> {
   const handleScroll = () => {
 
@@ -20,7 +21,9 @@ const Hero = ()=> {
         />
       </div>
       <div className='hero__image-container'>
-           
+           <div className="hero__image">
+              <Image src="/hero.png" alt="hero" fill className='object-contain'></Image>
+           </div>
       </div>
     </div>
   )
