@@ -1,13 +1,12 @@
 "use client"
-
-
 import React from 'react'
 import Image from 'next/image'
 import CustomButton from './CustomButton';
 import hero_car from '../public/hero.png';
+
 const Hero = ()=> {
   const handleScroll = () => {
-
+    
   }
   return (
     <div className='hero'>
@@ -24,11 +23,10 @@ const Hero = ()=> {
       <div className='hero__image-container'>
            <div className="hero__image" >
               <Image src="/hero.png" alt="hero" fill className='object-contain'></Image>
+              </div>
               <div className='hero__image-overlay'></div>
            </div>
       </div>
-    </div>
   )
 }
-
 export default Hero;
