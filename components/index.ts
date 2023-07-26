@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
-
+import SearchManufacter from "./SearchManufacter";
 
 export{
   Hero,
@@ -12,5 +12,6 @@ export{
   Navbar,
   Footer,
   CustomFilter,
-  SearchBar
+  SearchBar,
+  SearchManufacter
 }
