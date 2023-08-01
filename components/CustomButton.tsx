@@ -1,5 +1,6 @@
-import { CustomButtonProps } from "@/Types";
+"use client"
 import Image from "next/image";
+import { CustomButtonProps } from "@/Types";
 import React from "react";
 
 
@@ -9,7 +10,7 @@ const CustomButton = ({ title,containerStyles,handleClick ,btnType,textStyles,ri
     disabled={false}
     type={"button"|| btnType}
     className={`custom-btn ${containerStyles}`}
-    onClick={()=> {}}
+    onClick={handleClick}
     >
     <span className={`flex-1 ${textStyles}`}>{title}</span>
          {rightIcon && (
