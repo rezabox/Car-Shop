@@ -38,7 +38,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailspProps) => {
             >
               <Dialog.Panel
                 className="relative w-full 
-                max-w-lg max-h-[90vh] overflow-y-auto
+                max-w-lg max-h-[90vh] p-6 overflow-y-auto
                 transform rounded-2xl bg-white
                 text-left shadow-xl transition-all flex flex-col gap-5
               "
@@ -69,7 +69,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailspProps) => {
                       alt="car toyota"
                     ></Image>
                      </div>
-                     <div className="flex gap-3 p-3">
+                     <div className="flex gap-3">
                        <div className="flex-1 relative w-full h-24
                         bg-primary-blue-100 rounded-lg
                        ">
@@ -104,8 +104,9 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailspProps) => {
                               <div className="flex justify-between
                                 gap-5 w-full text-right
                               " key={key}>
-                                    <h4>{key}</h4>
-                                    <p>{value}</p>
+                                    <h4 className="text-grey
+                                    capitalize">{key.split("_").join(" ")}</h4>
+                                    <p className="text-black-100 font-semibold">{value}</p>
                               </div>
                         ))}
                      </div>

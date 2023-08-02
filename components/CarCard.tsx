@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image';
 import { CarProps } from '@/Types';
 import CustomButton from './CustomButton';
@@ -41,25 +41,23 @@ const CarCard = ({ car }: CarCardProps)=> {
                   </p>
                </div>
                <div className="car-card__icon">
-                  <Image src="/tire.svg" width={20} height={20} alt="steering wheel"></Image>
+                  <Image src="/tire.svg" width={20} height={20} alt="tires"></Image>
                   <p className='text-[14px]'>
                        {drive.toUpperCase()}
                   </p>
                </div>
                <div className="car-card__icon">
-                  <Image src="/gas.svg" width={20} height={20} alt="steering wheel"></Image>
+                  <Image src="/gas.svg" width={20} height={20} alt="gas"></Image>
                   <p className='text-[14px]'>
                     {city_mpg} MPG
                   </p>
                </div>
             </div>
-
             <div className="car-card__btn-container">
                   <CustomButton
                       title="View More"
                       containerStyles="w-full py-[16px] 
-                      rounded-full bg-primary-blue
-                      shadow-transparent" 
+                      rounded-full bg-primary-blue" 
                       textStyles="text-[14px] text-white leading-[17px] font-bold" 
                       rightIcon="/right-arrow.svg" 
                       handleClick={()=> setIsOpen(true)}
@@ -68,6 +66,6 @@ const CarCard = ({ car }: CarCardProps)=> {
         </div>
         <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
      </div>
-  )
-}
+  );
+};
 export default CarCard;
