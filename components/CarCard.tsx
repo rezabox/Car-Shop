@@ -30,7 +30,7 @@ const CarCard = ({ car }: CarCardProps)=> {
           </span>   
         </p>
         <div className="car-card__image">
-            <Image src="/hero.png" fill priority className='object-contain' alt='car toyota'></Image>
+            <Image src='/hero.png' fill priority className='object-contain' alt='car model' />
         </div>
         <div className="relative flex w-full mt-2">
             <div className="car-card__icon-container">
