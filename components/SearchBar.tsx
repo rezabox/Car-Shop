@@ -1,7 +1,8 @@
 "use client"
-import React, { useState } from 'react'
-import SearchManufacter from './SearchManufacter'
-import Image from 'next/image'
+import React, { useState } from 'react';
+import SearchManufacter from './SearchManufacter';
+import Image from 'next/image';
+import Swal from "sweetalert2";
 import { useRouter } from 'next/navigation'
 const SearchButton = ({otherClasses}:{otherClasses:string}) => (
   <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}>
@@ -20,9 +21,13 @@ const SearchBar = ()=> {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if(manufacturer === '' && model === '') {
-       return alert("Please fill in the search bar")
+       return Swal.fire(
+        'Error',
+        'Please fill in the search bar',
+        'error'
+      )
     }
-
+    
     updateSearchParams(
       model.toLowerCase(), manufacturer.toLowerCase()
       )
