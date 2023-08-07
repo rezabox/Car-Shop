@@ -32,7 +32,9 @@ export interface CarProps {
    transmission:string;
    year:number;
 }
-
+export interface HomeProps{
+     searchParams: FilterProps
+}
 export interface FilterProps{
    manufacturer:string,
    year:number,
@@ -44,7 +46,7 @@ export interface OptionProps{
    title:string;
    value:string;
 }
-export interface FilterContainer{
+export interface CustomFilterProps{
    title:string,
    options:OptionProps[];
 }
