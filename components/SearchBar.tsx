@@ -27,7 +27,6 @@ const SearchBar = ()=> {
         'error'
       )
     }
-    
     updateSearchParams(
       model.toLowerCase(), manufacturer.toLowerCase()
       )
