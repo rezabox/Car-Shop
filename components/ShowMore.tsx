@@ -3,6 +3,7 @@ import { ShowMoreProps } from '@/Types';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 import CustomButton from './CustomButton';
+// import { updateSearchParams } from '@/utils';
 
 const ShowMore = ({pageNumber,isNext}:ShowMoreProps) => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const ShowMore = ({pageNumber,isNext}:ShowMoreProps) => {
              handleClick={handleNavigation}
            />
       )}
-    </div>
+     </div>
   )
 }
 export default ShowMore;
